@@ -1,0 +1,447 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visualization of Dataset &#8212; Prediction Based on GLOBAL TERRORISM</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Build models" href="KNN_alg.html" />
+    <link rel="prev" title="Data Processing" href="data_process.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/2018.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Prediction Based on GLOBAL TERRORISM</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="搜索这本书..." aria-label="搜索这本书..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="introduction_of_database.html">
+   Introduction of Background
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data_process.html">
+   Data Processing
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Visualization of Dataset
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="KNN_alg.html">
+   Build models
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="conclusion.html">
+   Conclusion
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="切换导航" aria-controls="site-navigation"
+                title="切换导航" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="下载此页面"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/docs/visualization1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="下载笔记本文件" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/docs/visualization1.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="下载源文件" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="列印成PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="全屏模式"
+        title="全屏模式"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/quantecon-mini-example/master?urlpath=tree/mini_book/docs/visualization1.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="发射 Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> 内容
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#details">
+   Details
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Visualization of Dataset</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> 内容 </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#details">
+   Details
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="visualization-of-dataset">
+<span id="visualization1"></span><h1>Visualization of Dataset<a class="headerlink" href="#visualization-of-dataset" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>In order to have a better understanding of the dataset, we analyze it from various aspects. The graphs below express how different attack target, attack region and other important features change over the years.</p>
+</div>
+<div class="section" id="details">
+<h2>Details<a class="headerlink" href="#details" title="Permalink to this headline">¶</a></h2>
+<p>The first one is about the number of terrorist activities.</p>
+<p>First, there was two obvious continuous growth periods throughout the forty seven years. The first peroid is from 1970 to 1994 and another period starts after 2000’s. After those two different upsurges, the activities in second period (in 2000’s, the number is over 10000) is noticeably third of that in the former period. It’s shown that the attack frequency contributes a pattern like “rampant-governance-convergence-non governance-rampant again”.</p>
+<p>The frequency of terrorist attacks in 2014 reached the peak in five years. It may be related to the kidnapping in Tikrit City, Saladin Province, Iraq in June 2014 - about 1686 soldiers were kidnapped and all died. The terrorist attack was the deadliest terrorist attack in the year.</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span><span class="n">data</span><span class="o">=</span><span class="n">terror</span><span class="p">,</span><span class="n">palette</span><span class="o">=</span><span class="s1">&#39;RdYlGn_r&#39;</span><span class="p">,</span><span class="n">edgecolor</span><span class="o">=</span><span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(</span><span class="s1">&#39;dark&#39;</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Number Of Terrorist Activities Each Year&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="figure align-default">
+<img alt="../_images/1.png" src="../_images/1.png" />
+</div>
+<p>The second one aims at the attacking methods by terrorists. Nearly 80000 terrorist attacks have used explosions/bombing while only a very small part is hijacking.</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="s1">&#39;AttackType_Name&#39;</span><span class="p">,</span><span class="n">data</span><span class="o">=</span><span class="n">terror</span><span class="p">,</span><span class="n">palette</span><span class="o">=</span><span class="s1">&#39;inferno&#39;</span><span class="p">,</span><span class="n">order</span><span class="o">=</span><span class="n">terror</span><span class="p">[</span><span class="s1">&#39;AttackType_Name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Attacking Methods by Terrorists&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="figure align-default">
+<img alt="../_images/2.png" src="../_images/2.png" />
+</div>
+<p>The third one is the main victimized targets in the terrorist attacks.There are many purposes for launching the attack, among which the reason for resource plundering ranks first.</p>
+<p>This kind of target data can be connected with real-world events. Even without the method of building models, it can also achieve the purpose of prevention by analyzing the recent economic and political forms of various regions.</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">terror</span><span class="p">[</span><span class="s1">&#39;Targtype_Name&#39;</span><span class="p">],</span><span class="n">palette</span><span class="o">=</span><span class="s1">&#39;inferno&#39;</span><span class="p">,</span><span class="n">order</span><span class="o">=</span><span class="n">terror</span><span class="p">[</span><span class="s1">&#39;Targtype_Name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Main Targets&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="figure align-default">
+<img alt="../_images/3.png" src="../_images/3.png" />
+</div>
+<p>Then, here comes to the numbers of cases of different attack types in different regions.</p>
+<p>Compared with the display of regional data alone, the combination of attack methods and regions can better reflect the authenticity and has more practical significance. It’s can be seen that South Asia, Middle East and North Africa sufferes a lot of attacks and most of the attack is bombing, which is consistent with the previous plot of attackng methods.</p>
+<p>We can also think about the main reason why these three places become the focus of casualties although the information is not shown here. The first reason is resource plunder, and another reason is the struggle between political factions and religious groups, which usually makes the government compromise with its opponents by making terrorist attacks in this region.</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">terror</span><span class="o">.</span><span class="n">Region_Name</span><span class="p">,</span><span class="n">terror</span><span class="o">.</span><span class="n">AttackType_Name</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">stacked</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(</span><span class="s1">&#39;RdYlGn&#39;</span><span class="p">,</span><span class="mi">9</span><span class="p">))</span>
+<span class="n">fig</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="figure align-default">
+<img alt="../_images/4.png" src="../_images/4.png" />
+</div>
+<p>Next, you can see the numbers of attacks and person who get killed in different countries. Iraq has the highest number of casualties, which are relatively tragic. Also, It’s can be observed that in cities such as Iraq, Pakistan and Afghanistan, the number of conflicts is small but the casualties are heavy. However, What many people don’t know is that terrorist attacks have also occurred in Thailand, Turkey and Spain while they are all popular tourist cities.</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">coun_terror</span><span class="o">=</span><span class="n">terror</span><span class="p">[</span><span class="s1">&#39;Country_Name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()[:</span><span class="mi">15</span><span class="p">]</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span>
+<span class="n">coun_terror</span><span class="o">.</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Attacks&#39;</span><span class="p">]</span>
+<span class="n">coun_kill</span><span class="o">=</span><span class="n">terror</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Country_Name&#39;</span><span class="p">)[</span><span class="s1">&#39;Killed&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span>
+<span class="n">coun_terror</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">coun_kill</span><span class="p">,</span><span class="n">left_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">right_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mf">0.9</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="figure align-default">
+<img alt="../_images/5.png" src="../_images/5.png" />
+</div>
+<p>The two pictures below shows activities of top 10 terrorist groups ,number of attacks in regions from 1970 to 2017 respectively. This chart echoes the first analysis, especially the sudden sharp rise in the number of attacks around 2010. Some people speculate that this may be related to the financial crisis in 2008.</p>
+<p>During the presentation, one student asked us why there seemed to be no terrorist attacks during 2000-2010 and whether we did anything. At that time, because there was not clear to which picture it was, the answer was not accurate enough. As can be seen from the following two figures, there are many conflicts, but: 1) the unit of the vertical axis is large and the broken line is thick, so the data looks very close to 0. 2) Different broken lines cover each other, which will also affect the judgment. Therefore, we did not intentionally delete some data.</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">top_groups10</span><span class="o">=</span><span class="n">terror</span><span class="p">[</span><span class="n">terror</span><span class="p">[</span><span class="s1">&#39;Group_Name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">terror</span><span class="p">[</span><span class="s1">&#39;Group_Name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()[</span><span class="mi">1</span><span class="p">:</span><span class="mi">11</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="p">)]</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">top_groups10</span><span class="o">.</span><span class="n">Year</span><span class="p">,</span><span class="n">top_groups10</span><span class="o">.</span><span class="n">Group_Name</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(</span><span class="s1">&#39;Paired&#39;</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">fig</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="figure align-default">
+<img alt="../_images/6.png" src="../_images/6.png" />
+</div>
+<div class="figure align-default">
+<img alt="../_images/7.png" src="../_images/7.png" />
+</div>
+<p>At last, we can also use this dataset to calculate the terrorism risk in percentage for every months in specific country. Here we use Mexico as an example.This time-related data can be deeply mined but in this exercise, we are not committed to this direction.</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">country</span> <span class="o">=</span> <span class="s1">&#39;Mexico&#39;</span>
+<span class="n">months</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">terror</span><span class="p">[</span><span class="n">terror</span><span class="o">.</span><span class="n">Country_Name</span> <span class="o">==</span> <span class="n">country</span><span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Month&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">())</span>
+<span class="n">months</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">months</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">kv</span><span class="p">:(</span><span class="n">kv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">kv</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+<span class="n">tot</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">months</span><span class="o">.</span><span class="n">values</span><span class="p">()))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Entered Country: &quot;</span><span class="p">,</span><span class="n">country</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">months</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="s1">&#39; </span><span class="si">{:.2f}</span><span class="s1"> %&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="n">months</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">/</span><span class="n">tot</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">Entered</span> <span class="n">Country</span><span class="p">:</span>  <span class="n">Mexico</span>
+<span class="mi">1</span>  <span class="mf">15.46</span> <span class="o">%</span>
+<span class="mi">9</span>  <span class="mf">14.43</span> <span class="o">%</span>
+<span class="mi">11</span>  <span class="mf">12.37</span> <span class="o">%</span>
+<span class="mi">2</span>  <span class="mf">10.31</span> <span class="o">%</span>
+<span class="mi">3</span>  <span class="mf">9.28</span> <span class="o">%</span>
+<span class="mi">10</span>  <span class="mf">7.22</span> <span class="o">%</span>
+<span class="mi">5</span>  <span class="mf">7.22</span> <span class="o">%</span>
+<span class="mi">6</span>  <span class="mf">6.19</span> <span class="o">%</span>
+<span class="mi">7</span>  <span class="mf">5.15</span> <span class="o">%</span>
+<span class="mi">4</span>  <span class="mf">5.15</span> <span class="o">%</span>
+<span class="mi">8</span>  <span class="mf">4.12</span> <span class="o">%</span>
+<span class="mi">12</span>  <span class="mf">3.09</span> <span class="o">%</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>The several examples I mention above show that these data can correspond to real-world news, making it highly credible. Last but not the least, the data we show is not all and the complete dataset has more features that can be used for visualization and analysis.</p>
+<p>Through the above methods, we can concentrate and extract the information hidden in a large number of seemingly chaotic data, and find out the internal laws of different data characteristics. Hence,The step of data visualization lays a foundation for our later data modeling and prediction. For example, the types of weapons and terrorist organizations can be further studied.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="data_process.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Data Processing</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="KNN_alg.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Build models</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      通过 LIU Bingyu and LI Zemin and MA Yixin and LI Bowen<br/>
+    
+        &copy; 版权 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

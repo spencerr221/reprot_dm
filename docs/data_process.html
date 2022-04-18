@@ -1,0 +1,357 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Processing &#8212; Prediction Based on GLOBAL TERRORISM</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Visualization of Dataset" href="visualization1.html" />
+    <link rel="prev" title="Introduction of Background" href="introduction_of_database.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/2018.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Prediction Based on GLOBAL TERRORISM</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="搜索这本书..." aria-label="搜索这本书..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="introduction_of_database.html">
+   Introduction of Background
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Data Processing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="visualization1.html">
+   Visualization of Dataset
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="KNN_alg.html">
+   Build models
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="conclusion.html">
+   Conclusion
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="切换导航" aria-controls="site-navigation"
+                title="切换导航" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="下载此页面"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/docs/data_process.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="下载笔记本文件" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/docs/data_process.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="下载源文件" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="列印成PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="全屏模式"
+        title="全屏模式"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/quantecon-mini-example/master?urlpath=tree/mini_book/docs/data_process.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="发射 Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> 内容
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#database-of-our-project">
+   Database of our project
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rename-the-tags-of-the-data-and-check-the-missing-values">
+     Rename the tags of the data and check the missing values
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Data Processing</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> 内容 </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#database-of-our-project">
+   Database of our project
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rename-the-tags-of-the-data-and-check-the-missing-values">
+     Rename the tags of the data and check the missing values
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="data-processing">
+<span id="data-process"></span><h1>Data Processing<a class="headerlink" href="#data-processing" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="database-of-our-project">
+<h2>Database of our project<a class="headerlink" href="#database-of-our-project" title="Permalink to this headline">¶</a></h2>
+<p>The Global Terrorism Database (GTD) is an open-source database including information on terrorist attacks around the world from 1970 through 2017 (with annual updates planned for the future). The GTD includes systematic data on domestic as well as international terrorist incidents that have occurred during this time period and now includes more than 170,000 cases. The database is maintained by researchers at the National Consortium for the Study of Terrorism and Responses to Terrorism (START), headquartered at the University of Maryland.</p>
+<p>Based on 46 years data obtained from The Global Terrorism Database (GTD), we can catch these following facts: Iraq is the largest country with terrorism incidents (22130 incidents).
+Andorra, Antigua and Barbuda, Brunei, Falkland Islands, New Hebrides, North Korea, South Vietnam, St. Lucia, Vatican, Wallis and Futuna are the safest countries with only 1 incident from 1970 - 2016. The top 10 countries with the most terrorism incidents, there are 2 countries from Europe: United Kingdom and Turkey.</p>
+<p>The Global Terrorism Database(GTD)
+<img alt="data_1" src="../_images/data_1.png" /></p>
+<div class="section" id="rename-the-tags-of-the-data-and-check-the-missing-values">
+<h3>Rename the tags of the data and check the missing values<a class="headerlink" href="#rename-the-tags-of-the-data-and-check-the-missing-values" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">terror</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;globaldata.csv&quot;</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;ISO-8859-1&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">terror</span><span class="o">.</span><span class="n">isnull</span><span class="p">(),</span><span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">,</span><span class="n">cbar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">terror</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;iyear&#39;</span><span class="p">:</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span><span class="s1">&#39;imonth&#39;</span><span class="p">:</span><span class="s1">&#39;Month&#39;</span><span class="p">,</span><span class="s1">&#39;iday&#39;</span><span class="p">:</span><span class="s1">&#39;Day&#39;</span><span class="p">,</span><span class="s1">&#39;country&#39;</span><span class="p">:</span><span class="s1">&#39;Country_Code&#39;</span><span class="p">,</span><span class="s1">&#39;country_txt&#39;</span><span class="p">:</span><span class="s1">&#39;Country_Name&#39;</span><span class="p">,</span><span class="s1">&#39;region&#39;</span><span class="p">:</span><span class="s1">&#39;Region_Code&#39;</span><span class="p">,</span><span class="s1">&#39;region_txt&#39;</span><span class="p">:</span><span class="s1">&#39;Region_Name&#39;</span><span class="p">,</span><span class="s1">&#39;city&#39;</span><span class="p">:</span><span class="s1">&#39;City&#39;</span><span class="p">,</span><span class="s1">&#39;attacktype1&#39;</span><span class="p">:</span><span class="s1">&#39;AttackType_Code&#39;</span><span class="p">,</span><span class="s1">&#39;attacktype1_txt&#39;</span><span class="p">:</span><span class="s1">&#39;AttackType_Name&#39;</span><span class="p">,</span><span class="s1">&#39;targtype1&#39;</span><span class="p">:</span><span class="s1">&#39;Targtype_Code&#39;</span><span class="p">,</span><span class="s1">&#39;targtype1_txt&#39;</span><span class="p">:</span><span class="s1">&#39;Targtype_Name&#39;</span><span class="p">,</span><span class="s1">&#39;gname&#39;</span><span class="p">:</span><span class="s1">&#39;Group_Name&#39;</span><span class="p">,</span><span class="s1">&#39;weaptype1&#39;</span><span class="p">:</span><span class="s1">&#39;Weaptype1_Code&#39;</span><span class="p">,</span><span class="s1">&#39;weaptype1_txt&#39;</span><span class="p">:</span><span class="s1">&#39;Weaptype1_Name&#39;</span><span class="p">,</span><span class="s1">&#39;nkill&#39;</span><span class="p">:</span><span class="s1">&#39;Killed&#39;</span><span class="p">,</span><span class="s1">&#39;nwound&#39;</span><span class="p">:</span><span class="s1">&#39;Wounded&#39;</span><span class="p">,</span><span class="s1">&#39;propextent_txt&#39;</span><span class="p">:</span><span class="s1">&#39;Property_Damage&#39;</span><span class="p">},</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">terror</span><span class="p">[</span><span class="s1">&#39;casualities&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">terror</span><span class="p">[</span><span class="s1">&#39;Killed&#39;</span><span class="p">]</span><span class="o">+</span><span class="n">terror</span><span class="p">[</span><span class="s1">&#39;Wounded&#39;</span><span class="p">]</span>
+<span class="n">terror</span><span class="o">=</span><span class="n">terror</span><span class="p">[[</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span><span class="s1">&#39;Month&#39;</span><span class="p">,</span><span class="s1">&#39;Day&#39;</span><span class="p">,</span><span class="s1">&#39;Country_Code&#39;</span><span class="p">,</span><span class="s1">&#39;Country_Name&#39;</span><span class="p">,</span><span class="s1">&#39;Region_Code&#39;</span><span class="p">,</span><span class="s1">&#39;Region_Name&#39;</span><span class="p">,</span><span class="s1">&#39;City&#39;</span><span class="p">,</span><span class="s1">&#39;latitude&#39;</span><span class="p">,</span><span class="s1">&#39;longitude&#39;</span><span class="p">,</span><span class="s1">&#39;AttackType_Code&#39;</span><span class="p">,</span><span class="s1">&#39;AttackType_Name&#39;</span><span class="p">,</span><span class="s1">&#39;Targtype_Code&#39;</span><span class="p">,</span><span class="s1">&#39;Targtype_Name&#39;</span><span class="p">,</span><span class="s1">&#39;Group_Name&#39;</span><span class="p">,</span><span class="s1">&#39;Weaptype1_Code&#39;</span><span class="p">,</span><span class="s1">&#39;Weaptype1_Name&#39;</span><span class="p">,</span><span class="s1">&#39;Killed&#39;</span><span class="p">,</span><span class="s1">&#39;Wounded&#39;</span><span class="p">,</span><span class="s1">&#39;casualities&#39;</span><span class="p">,</span><span class="s1">&#39;Property_Damage&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p><img alt="data_5" src="../_images/data_5.png" /></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">terror</span> <span class="o">=</span> <span class="n">terror</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+<span class="n">terror</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">terror</span><span class="o">.</span><span class="n">isnull</span><span class="p">(),</span><span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">,</span><span class="n">cbar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The image above shows the heatmap of the database before we drop the null value of the feature, the yellow part represent for the missing values. According to our calculation, the volume of the data we dropped, is too small compared with the whole dataset. So that we thought it would not influence the performance of our prediction.</p>
+<p><img alt="data_6" src="../_images/data_6.png" /></p>
+<p>After the pre-processing, the whole heatmap became purple, so that we got the database without missing values.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="introduction_of_database.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Introduction of Background</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="visualization1.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Visualization of Dataset</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      通过 LIU Bingyu and LI Zemin and MA Yixin and LI Bowen<br/>
+    
+        &copy; 版权 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

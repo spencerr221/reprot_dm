@@ -1,0 +1,14 @@
+format: jb-article
+root: docs/index
+sections:
+- file: docs/introduction_of_database
+- file: docs/data_process
+- file: docs/visualization1
+- file: docs/KNN_alg
+- file: docs/conclusion
+
+
+
+
+
+
